@@ -77,11 +77,11 @@
         },
         "description": "Set SensorControl mowing time adjustment sensitivity."
     },
-    "GetFrostSensorEnabledLegacy": {
+    "GetLiftSensorLegacy": {
         "major": 4476,
         "minor": 6,
         "responseType": "bool",
-        "description": "Legacy frost sensor enabled state."
+        "description": "Lift sensor state. Previously misnamed GetFrostSensorEnabledLegacy."
     },
     "GetEcoModeEnabled": {
         "major": 4692,
