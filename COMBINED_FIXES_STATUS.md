@@ -8,6 +8,7 @@ Last checked: 2026-09-17 (against `upstream/main` = `4bf4b00`).
 | [#158](https://github.com/alistair23/AutoMower-BLE/pull/158) | AuthenticationFailed pairing diagnostics (by kelvan) | **Partially merged** (`4bf4b00`) |
 | [#161](https://github.com/alistair23/AutoMower-BLE/pull/161) | swapped eco mode / frost sensor mapping + SetFrostSensorEnabledLegacy | Open — **the only functional blocker**, and partly disputed (see below) |
 | [#162](https://github.com/alistair23/AutoMower-BLE/pull/162) | competing ECO/frost fix by AlirezaT, overlaps #161 | Open |
+| [#166](https://github.com/alistair23/AutoMower-BLE/pull/166) | rename `GetFrostSensorEnabledLegacy` (4476/6) to `GetLiftSensorLegacy` | Open — cherry-picked into this branch |
 
 ## Hardware evidence (2026-09-18, Gardena SILENO Minimo 250)
 
@@ -91,7 +92,7 @@ mapping for the legacy pair and keeping #161's credited main correction.
 
 ## Steps to drop the branch
 
-1. Drop `40ce4ec` from #161 (settled by the hardware evidence above), then get #161 merged.
+1. Get #161 and #166 merged (#161 no longer carries the legacy setter).
 2. Decide on the #158 remainder — either push it upstream or drop those log lines
    locally. If dropped, #161 is the sole blocker.
 3. **Wait for a PyPI release.** PyPI `automower-ble` 0.2.9 was uploaded
